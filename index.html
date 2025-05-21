@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给仪嫚的专属爱意</title>
+  <style>
+    body {
+      background-color: #ffe6ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+   .heart {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation: beat 1s infinite;
+    }
+
+   .heart::before,
+   .heart::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+   .heart::before {
+      top: -25px;
+      left: 0;
+    }
+
+   .heart::after {
+      top: 0;
+      left: -25px;
+    }
+
+    p {
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @keyframes beat {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heart"></div>
+  <p>秦仪嫚，你就像这跳动的爱心，在我心里永远鲜活，我爱你💕</p>
+  <script>
+    // 这里可添加更多交互功能，比如点击爱心触发提示
+    const heart = document.querySelector('.heart');
+    heart.addEventListener('click', function () {
+      alert('你点到我的心啦~就像你住进了我的心里❤');
+    });
+  </script>
+</body>
+
+</html>
